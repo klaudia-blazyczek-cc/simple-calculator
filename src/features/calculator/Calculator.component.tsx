@@ -1,13 +1,14 @@
 import React from 'react';
 
 import { CalculatorWrapper } from './Calculator.styled';
-import { StyledButton } from '../../ui';
+import { StyledButtonsPanel } from './buttons-panel';
+import { StyledCalculationsPanel } from './calculations-panel';
 
 function Calculator() {
 	return (
 		<CalculatorWrapper>
-			Calculator
-			<StyledButton />
+			<StyledCalculationsPanel value='Wynik' />
+			<StyledButtonsPanel />
 		</CalculatorWrapper>
 	);
 }
