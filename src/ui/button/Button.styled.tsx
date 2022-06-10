@@ -16,6 +16,12 @@ const StyledButton = styled(Button)<ButtonProps>`
 	height: 80px;
 	font-weight: bold;
 	font-size: 2.2rem;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 
 	&:hover {
 		cursor: pointer;
