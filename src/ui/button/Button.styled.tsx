@@ -17,10 +17,6 @@ const StyledButton = styled(Button)<ButtonProps>`
 	font-weight: bold;
 	font-size: 2.2rem;
 
-	span {
-		display: inline-block;
-	}
-
 	&:hover {
 		cursor: pointer;
 		background-color: ${props => (props.primary ? '#cccccc' : '#f07f1c')};

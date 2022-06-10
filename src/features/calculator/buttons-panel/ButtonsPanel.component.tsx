@@ -4,77 +4,78 @@ import { StyledButton } from '../../../ui';
 
 interface Props {
 	className?: string;
+	onClick(content: string): void;
 }
 
-function ButtonsPanel({ className }: Props) {
+function ButtonsPanel({ className, onClick }: Props) {
 	return (
 		<table className={className}>
 			<tbody>
 				<tr>
 					<td>
-						<StyledButton primary={true} sign='AC' />
+						<StyledButton primary={true} sign='AC' onClick={onClick} />
 					</td>
 					<td>
-						<StyledButton primary={true} sign='+/-' />
+						<StyledButton primary={true} sign='+/-' onClick={onClick} />
 					</td>
 					<td>
-						<StyledButton primary={true} sign='%' />
+						<StyledButton primary={true} sign='%' onClick={onClick} />
 					</td>
 					<td>
-						<StyledButton primary={false} sign='÷' />
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<StyledButton primary={true} sign='7' />
-					</td>
-					<td>
-						<StyledButton primary={true} sign='8' />
-					</td>
-					<td>
-						<StyledButton primary={true} sign='9' />
-					</td>
-					<td>
-						<StyledButton primary={false} sign='x' />
+						<StyledButton primary={false} sign='÷' onClick={onClick} />
 					</td>
 				</tr>
 				<tr>
 					<td>
-						<StyledButton primary={true} sign='4' />
+						<StyledButton primary={true} sign='7' onClick={onClick} />
 					</td>
 					<td>
-						<StyledButton primary={true} sign='5' />
+						<StyledButton primary={true} sign='8' onClick={onClick} />
 					</td>
 					<td>
-						<StyledButton primary={true} sign='6' />
+						<StyledButton primary={true} sign='9' onClick={onClick} />
 					</td>
 					<td>
-						<StyledButton primary={false} sign='-' />
+						<StyledButton primary={false} sign='x' onClick={onClick} />
 					</td>
 				</tr>
 				<tr>
 					<td>
-						<StyledButton primary={true} sign='1' />
+						<StyledButton primary={true} sign='4' onClick={onClick} />
 					</td>
 					<td>
-						<StyledButton primary={true} sign='2' />
+						<StyledButton primary={true} sign='5' onClick={onClick} />
 					</td>
 					<td>
-						<StyledButton primary={true} sign='3' />
+						<StyledButton primary={true} sign='6' onClick={onClick} />
 					</td>
 					<td>
-						<StyledButton primary={false} sign='+' />
+						<StyledButton primary={false} sign='-' onClick={onClick} />
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<StyledButton primary={true} sign='1' onClick={onClick} />
+					</td>
+					<td>
+						<StyledButton primary={true} sign='2' onClick={onClick} />
+					</td>
+					<td>
+						<StyledButton primary={true} sign='3' onClick={onClick} />
+					</td>
+					<td>
+						<StyledButton primary={false} sign='+' onClick={onClick} />
 					</td>
 				</tr>
 				<tr>
 					<td colSpan={2}>
-						<StyledButton primary={false} sign='0' />
+						<StyledButton primary={false} sign='0' onClick={onClick} />
 					</td>
 					<td>
-						<StyledButton primary={false} sign='.' />
+						<StyledButton primary={false} sign='.' onClick={onClick} />
 					</td>
 					<td>
-						<StyledButton primary={false} sign='=' />
+						<StyledButton primary={false} sign='=' onClick={onClick} />
 					</td>
 				</tr>
 			</tbody>
